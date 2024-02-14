@@ -1,0 +1,21 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eee;
+  font-family: Proxima Nova,-apple-system,Roboto,Arial,sans-serif;
+  padding-bottom: 30px;
+}
+
+.MainContent {
+  max-width: 800px;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}

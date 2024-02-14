@@ -1,0 +1,16 @@
+.breadcrumb {
+  display: block;
+  min-height: 35px;
+  color: #999;
+  padding-top: 8px;
+
+  &__link {
+    font-size: 12px;
+    text-decoration: none;
+    color: #999;
+  }
+  &__caret {
+    font-size: 18px;
+    margin: 0 3px;
+  }
+}
