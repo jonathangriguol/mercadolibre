@@ -6,9 +6,11 @@
     "outDir": "./dist",
     "noImplicitAny": false,
     "strict": true,
-    "allowJs": true,
-    "esModuleInterop": true
+    "allowJs": false,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true
   },
-  "include": ["src/**/*.ts", "src/**/*.js"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }

@@ -1,7 +1,6 @@
-import { getItemById, getItems } from "../controllers/items.controller.js";
-
 import { Router } from 'express';
-import { validateSearchQuery } from "../middlewares/items.validations.js";
+import { getItemById, getItems } from "../controllers/items.controller.ts";
+import { validateSearchQuery } from "../middlewares/items.validations.ts";
 
 const router = Router();
 
