@@ -3,7 +3,8 @@ const validateSearchQuery = (req, res, next) => {
   if (!req.query.search) {
     return res
       .status(400)
-      .json({ message: 'Falta el parámetro de búsqueda "search"' });
+      .json({ message: "Falta el parámetro de búsqueda <search>"
+     });
   }
 
   next();

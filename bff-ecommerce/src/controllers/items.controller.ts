@@ -1,6 +1,6 @@
 import { Request, Response, Router } from "express";
-import itemsService from "../services/items.service.js";
-import Item from "../models/item.model.js";
+import itemsService from "../services/items.service.ts";
+import Item from "../models/item.model.ts";
 
 const itemsController = Router();
 

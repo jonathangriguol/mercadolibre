@@ -1,6 +1,6 @@
 import express, { Application } from 'express';
-import healthRouter from './routes/health.route.js';
-import itemsRouter from './routes/items.route.js';
+import healthRouter from './routes/health.route.ts';
+import itemsRouter from './routes/items.route.ts';
 
 const app: Application = express();
 
