@@ -1,6 +1,6 @@
 import { Request, Response, Router } from "express";
-import itemsService from "../services/items.service.ts";
-import Item from "../models/item.model.ts";
+import itemsService from "../services/items.service";
+import Item from "../models/item.model";
 
 const itemsController = Router();
 
@@ -10,7 +10,6 @@ const itemsController = Router();
  */
 export const getItems = async (req: Request, res: Response) => {
   try {
-    //console.log('********************************************************************** ', searchQuery)
     const searchQuery: string | undefined = req.query.search as string | undefined;
 
     const items: Array<Item> = await itemsService.getItems(searchQuery);

@@ -1,9 +1,9 @@
 import axios from "axios";
-import config from "../configs/config.ts";
-import Item from "../models/item.model.ts";
+import config from "../configs/config";
+import Item from "../models/item.model";
 
-import { ITEMS_PATH, SITES_MLA_PATH } from "../constants/urls.constants.ts";
-import { DECIMALS } from "../constants/bussiness.constants.ts";
+import { ITEMS_PATH, SITES_MLA_PATH } from "../constants/urls.constants";
+import { DECIMALS } from "../constants/bussiness.constants";
 
 const itemsService = {
   getItems: async (searchQuery: string | undefined): Promise<Item[]> => {

@@ -1,5 +1,5 @@
-import app from './app.ts';
-import config from './configs/config.ts';
+import app from './app';
+import config from './configs/config';
 
 const PORT = config.app_port;
 

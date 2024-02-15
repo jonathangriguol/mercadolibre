@@ -1,31 +1,22 @@
 import { useLoaderData } from "react-router-dom";
 import ProductDetail from "../../components/ProductDetail/ProductDetail";
 import { Breadcrumb } from "../../components/Breadcrumb";
+import { getItem } from "../../services/itemService";
 
-const product = {
-  first: "Deco Reverse Sombrero Oxford",
-  last: "Name",
-  avatar: "https://placekitten.com/g/200/200",
-  twitter: "your_handle",
-  notes: "Some notes Some notes Some notes Some notes Some notes Some notes Some notes Some notes Some notes Some notes ",
-  favorite: true,
-};
+export async function loader({ params }) {
+  const { id } = params;
+  const item = await getItem(id);
 
-export async function loader({ request }) {
-  const url = new URL(request.url);
-  const searchParams = url.searchParams.get("search");
-  //const product = await getProduct(searchParams);
-
-  return { product };
+  return item;
 }
 
 const Product = () => {
-  const { product } = useLoaderData();
+  const item = useLoaderData();
 
   return (
     <>
       <Breadcrumb items={null} />
-      <ProductDetail product={product} />
+      <ProductDetail product={item} />
     </>
   );
 };
