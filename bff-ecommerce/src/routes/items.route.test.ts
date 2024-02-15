@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../app.ts';
+import app from '../app';
 
 /**
  * I could add more complexity using fake data (mocks) in order to

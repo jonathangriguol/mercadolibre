@@ -1,5 +1,5 @@
-import { Form, useLoaderData, useNavigate, useNavigation } from "react-router-dom";
-import "./Header.scss"; // Importa el archivo SCSS para aplicar estilos
+import { Form, useNavigate } from "react-router-dom";
+import "./Header.scss";
 import { useState } from "react";
 
 const Header = () => {

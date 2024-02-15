@@ -9,9 +9,9 @@ const List = ({ items }) => {
         <ListItem
           key={index}
           id={item.id}
-          thumbnail={item.thumbnail}
+          thumbnail={item.picture}
           title={item.title}
-          price={item.price}
+          price={item.price.amount}
         />
       ))}
     </div>

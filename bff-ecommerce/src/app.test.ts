@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from './app.ts';
+import app from './app';
 
 /**
  * Just a simple test to verify that accessing to the root path
