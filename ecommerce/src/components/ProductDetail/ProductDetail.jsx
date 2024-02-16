@@ -2,27 +2,27 @@ import "./ProductDetail.scss";
 import Button from "../Button/Button";
 
 const ProductDetail = ({ product }) => {
-  console.log(product);
+
   const handleClick = () => {
-    console.log("Button clicked");
+    console.log("Button clicked!");
   };
 
   return (
     <div className="product-detail">
       <div className="product-detail__image">
         <img
-          src={product.item.picture || null}
-          alt={product.item.title || ""}
+          src={product.picture || null}
+          alt={product.title || ""}
         />
       </div>
 
       <div className="product-detail__resume">
         <h1>
-          {product.item.title && (
-            <>{product.item.title}</>
+          {product.title && (
+            <>{product.title}</>
           )}
         </h1>
-        <span className="price">$ {product.item.price.amount} </span>
+        <span className="price">$ {product.price.amount} </span>
         <Button onClick={handleClick} modifier="primary">
           Comprar
         </Button>
@@ -30,8 +30,8 @@ const ProductDetail = ({ product }) => {
 
       <div className="product-detail__description">
         <h2>Descripción del producto</h2>
-        {product.item.description && (
-          <p>{product.item.description}</p>
+        {product.description && (
+          <p>{product.description}</p>
         )}
       </div>
     </div>
