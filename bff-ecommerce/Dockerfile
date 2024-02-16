@@ -1,16 +1,10 @@
-FROM alpine
+FROM node:14-alpine
 
 WORKDIR /
 
 COPY package*.json ./
 
-RUN apk add --update nodejs npm
-
-RUN node --version
-
 RUN npm install
-
-RUN npm install -g nodemon
 
 COPY . .
 

@@ -11,19 +11,18 @@ const ProductDetail = ({ product }) => {
     <div className="product-detail">
       <div className="product-detail__image">
         <img
-          key={product.dataFromService1.thumbnail}
-          src={product.dataFromService1.thumbnail || null}
-          alt={product.dataFromService1.title || ""}
+          src={product.item.picture || null}
+          alt={product.item.title || ""}
         />
       </div>
 
       <div className="product-detail__resume">
         <h1>
-          {product.dataFromService1.title && (
-            <>{product.dataFromService1.title}</>
+          {product.item.title && (
+            <>{product.item.title}</>
           )}
         </h1>
-        <span className="price">$ {product.dataFromService1.price} </span>
+        <span className="price">$ {product.item.price.amount} </span>
         <Button onClick={handleClick} modifier="primary">
           Comprar
         </Button>
@@ -31,8 +30,8 @@ const ProductDetail = ({ product }) => {
 
       <div className="product-detail__description">
         <h2>Descripción del producto</h2>
-        {product.dataFromService2plain_text && (
-          <p>{product.dataFromService2.plain_text}</p>
+        {product.item.description && (
+          <p>{product.item.description}</p>
         )}
       </div>
     </div>

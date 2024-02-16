@@ -1,6 +1,5 @@
 import { Router } from 'express';
 import { getItemById, getItems } from "../controllers/items.controller";
-import { validateSearchQuery } from "../middlewares/items.validations";
 
 const router = Router();
 

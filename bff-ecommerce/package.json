@@ -1,26 +1,21 @@
 {
-  "name": "nodejs-api-from-scratch",
+  "name": "bff-ecommerce",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/index.js",
+    "start": "node dist/server.js",
     "dev": "tsc-watch --onSuccess \"node ./dist/server.js\"",
     "build": "tsc",
     "postinstall": "npm run build"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jonathan Griguol",
+  "license": "",
   "devDependencies": {
-    "@types/bcrypt": "^5.0.0",
-    "@types/compression": "^1.7.2",
-    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/jest": "^29.5.12",
-    "@types/jsonwebtoken": "^8.5.6",
-    "@types/morgan": "^1.9.3",
     "@types/node": "^16.7.2",
     "@types/supertest": "^6.0.2",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
@@ -33,23 +28,18 @@
   },
   "dependencies": {
     "axios": "^1.6.7",
-    "bcrypt": "^5.0.1",
-    "compression": "^1.7.4",
-    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "envalid": "^7.2.2",
     "express": "^4.17.1",
-    "helmet": "^4.6.0",
-    "joi": "^17.4.2",
-    "jsonwebtoken": "^8.5.1",
     "module-alias": "^2.2.2",
-    "mongoose": "^6.0.12",
-    "morgan": "^1.10.0",
     "supertest": "^6.3.4"
   },
   "_moduleAliases": {
-    "@/resources": "dist/resources",
-    "@/utils": "dist/utils",
-    "@/middleware": "dist/middleware"
+    "@/services": "dist/services",
+    "@/configs": "dist/configs",
+    "@/middleware": "dist/middlewares",
+    "@/interfaces": "dist/interfaces",
+    "@/routes": "dist/routes"
+    
   }
 }
