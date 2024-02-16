@@ -1,1 +1,1 @@
-export const DECIMALS: Number = 2;
+export const DECIMALS: number = 2;

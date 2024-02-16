@@ -1,6 +1,6 @@
 import axios from "axios";
 import config from "../configs/config";
-import Item from "../models/item.model";
+import Item from "../interfaces/itemDetail.model";
 
 import { ITEMS_PATH, SITES_MLA_PATH } from "../constants/urls.constants";
 import { DECIMALS } from "../constants/bussiness.constants";
@@ -49,9 +49,7 @@ const itemsService = {
 
   getItemDescriptionById: async (id) => {
     try {
-      const url = id
-        ? `${config.meli_api_url}/${ITEMS_PATH}/${id}/description`
-        : `${config.meli_api_url}`;
+      const url = id `${config.meli_api_url}/${ITEMS_PATH}/${id}/description`;
 
       const response = await axios.get(url);
 
