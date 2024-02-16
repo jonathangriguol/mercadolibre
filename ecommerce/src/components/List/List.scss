@@ -1,6 +1,13 @@
 .list {
   width: 100%;
-  padding: 0;
+  padding: 15px;
   box-sizing: border-box;
   background-color: #fff;
+
+  &__divider {
+    display: block;
+    border-width: 1px 0 0 0;
+    border-style:solid;
+    border-color: #f0f0f0;
+  }
 }

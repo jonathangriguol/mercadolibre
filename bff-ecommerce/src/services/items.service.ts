@@ -49,7 +49,7 @@ const itemsService = {
 
   getItemDescriptionById: async (id) => {
     try {
-      const url = id `${config.meli_api_url}/${ITEMS_PATH}/${id}/description`;
+      const url = `${config.meli_api_url}/${ITEMS_PATH}/${id}/description`;
 
       const response = await axios.get(url);
 

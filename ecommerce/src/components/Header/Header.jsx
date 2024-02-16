@@ -1,4 +1,4 @@
-import { Form, useNavigate } from "react-router-dom";
+import { Form, Link, useNavigate } from "react-router-dom";
 import "./Header.scss";
 import { useState } from "react";
 
@@ -19,8 +19,7 @@ const Header = () => {
     <header className="Header">
       <div className="HeaderContent">
         <div className="Logo">
-          {/* Aquí puedes insertar tu logotipo */}
-          <img src="logo.png" alt="Logotipo" height={30} />
+          <Link to={'/'}><img src="/logo.png" alt="Mercadolibre" height={30} /></Link>
         </div>
         <div className="SearchBox">
           <Form id="search-form" role="search" className="Form">

@@ -6,7 +6,7 @@ const ListItem = ({ id, thumbnail = "./no-image.jpg", title, price, location="CÃ
   return (
     <Link to={id} className="list-item">
       <div className="list-item__container">
-        <img src={thumbnail} alt="Thumbnail" className="list-item__thumbnail" />
+        <img src={thumbnail} alt={title} className="list-item__thumbnail" />
         <div className="list-item__content">
           <div className="list-item__price">$ {price}</div>
           <div className="list-item__title">{title}</div>

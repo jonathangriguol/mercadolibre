@@ -13,8 +13,8 @@ export async function loader({ params }) {
 }
 
 const Product = () => {
-  const {item} = useLoaderData();
-  const pageTitle = item.title[0].toUpperCase() + item.title.slice(1);
+  const { item } = useLoaderData();
+  const pageTitle = item?.title[0].toUpperCase() + item.title.slice(1);
   const pageTitleCanonical = pageTitle.replace(/\s+/g, "-").toLowerCase();
 
   return (
